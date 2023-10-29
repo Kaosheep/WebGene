@@ -76,6 +76,7 @@ main {
             position: fixed;
             width: 100vw;
         }
+
         .console {
             position: absolute;
             width: 50px;
@@ -84,6 +85,13 @@ main {
             top: 1rem;
             right: 1rem;
             z-index: 1000;
+            display: none;
+
+            @include m() {
+                display: block;
+
+            }
+
             span {
                 display: inline-block;
                 width: 35px;
@@ -91,6 +99,7 @@ main {
                 background-color: #fff;
                 position: absolute;
                 @include tc;
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -193,9 +202,10 @@ main {
     }
 
     header.open {
-        .bar{
+        .bar {
             right: 0;
         }
+
         .console {
 
             background-color: #000;

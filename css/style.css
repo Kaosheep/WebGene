@@ -469,6 +469,12 @@ main header .console {
   top: 1rem;
   right: 1rem;
   z-index: 1000;
+  display: none;
+}
+@media screen and (max-width: 414px) {
+  main header .console {
+    display: block;
+  }
 }
 main header .console span {
   display: inline-block;
